@@ -24,25 +24,26 @@ const Hero: React.FC = () => {
             Find beginner-friendly issues and make meaningful contributions to projects you love.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <Link 
-              to="/issues" 
-              className="group px-8 py-4 rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-500 dark:to-purple-500 text-white font-medium flex items-center gap-2 hover:opacity-90 transition-all duration-300 shadow-lg shadow-indigo-500/20 dark:shadow-indigo-700/20 w-full sm:w-auto relative overflow-hidden"
-            >
-              <Search className="w-5 h-5" />
-              <span>Find Issues</span>
-              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-            </Link>
-            
-            <Link 
-              to="/OpenSourceDocumentation" 
-              className="group px-8 py-4 rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-500 dark:to-purple-500 text-white font-medium flex items-center gap-2 hover:opacity-90 transition-all duration-300 shadow-lg shadow-indigo-500/20 dark:shadow-indigo-700/20 w-full sm:w-auto relative overflow-hidden"
-            >
-              Learn More
-              <ChevronRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 inline" />
-            </Link>
-          </div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 w-full px-4">
+      <Link 
+        to="/issues" 
+        className="group px-6 py-3 sm:px-8 sm:py-4 rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-500 dark:to-purple-500 text-white font-medium flex items-center justify-center gap-2 hover:opacity-90 transition-all duration-300 shadow-lg shadow-indigo-500/20 dark:shadow-indigo-700/20 w-full max-w-xs sm:max-w-none relative overflow-hidden text-center"
+      >
+        <Search className="w-4 h-4 sm:w-5 sm:h-5" />
+        <span className="text-sm sm:text-base">Find Issues</span>
+        <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 transition-transform duration-300 group-hover:translate-x-1" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+      </Link>
+      
+      <Link 
+        to="/OpenSourceDocumentation" 
+        className="group px-6 py-3 sm:px-8 sm:py-4 rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-500 dark:to-purple-500 text-white font-medium flex items-center justify-center gap-2 hover:opacity-90 transition-all duration-300 shadow-lg shadow-indigo-500/20 dark:shadow-indigo-700/20 w-full max-w-xs sm:max-w-none relative overflow-hidden text-center"
+      >
+        <span className="text-sm sm:text-base">Learn More</span>
+        <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 transition-transform duration-300 group-hover:translate-x-1 inline" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+      </Link>
+    </div>
           
           
         </div>

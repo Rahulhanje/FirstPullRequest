@@ -452,62 +452,73 @@ const Issues: React.FC = () => {
 
           {!loading && !error && issues.length > 0 && (
             <>
-              <div className="space-y-6">
-                {issues.map((issue) => (
-                  <div
-                    key={issue.id}
-                    className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border border-gray-100 dark:border-gray-700"
-                  >
-                    <div className="flex items-start justify-between">
-                      <div className="flex-1">
-                        <div className="mb-2">
-                          <span className="text-sm font-medium px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400">
-                            {getRepoName(issue.repository_url)}
-                          </span>
-                        </div>
-                        <a
-                          href={issue.html_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-xl font-semibold text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-2"
-                        >
-                          {issue.title}
-                          <ExternalLink size={16} />
-                        </a>
-                        <div className="mt-2 flex items-center space-x-4 text-sm text-gray-600 dark:text-gray-400">
-                          <span>#{issue.number}</span>
-                          <span>
-                            Opened on {format(new Date(issue.created_at), 'MMM d, yyyy')}
-                          </span>
-                          <span>
-                            Updated {format(new Date(issue.updated_at), 'MMM d, yyyy')}
-                          </span>
-                          <span>by {issue.user.login}</span>
-                        </div>
-                      </div>
-                      <img
-                        src={issue.user.avatar_url}
-                        alt={`${issue.user.login}'s avatar`}
-                        className="w-10 h-10 rounded-full"
-                      />
-                    </div>
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      {issue.labels.map((label) => (
-                        <span
-                          key={label.id}
-                          className="px-3 py-1 rounded-full text-sm"
-                          style={{
-                            backgroundColor: `#${label.color}20`,
-                            color: `#${label.color}`,
-                          }}
-                        >
-                          {label.name}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <div className="space-y-4 md:space-y-6">
+  {issues.map((issue) => (
+    <div
+      key={issue.id}
+      className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 md:p-6 border border-gray-100 dark:border-gray-700"
+    >
+      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 md:gap-0">
+        <div className="flex-1">
+          <div className="flex items-center justify-between md:justify-start mb-2">
+            <span className="text-xs md:text-sm font-medium px-2 py-1 md:px-3 md:py-1 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400">
+              {getRepoName(issue.repository_url)}
+            </span>
+            <img
+              src={issue.user.avatar_url}
+              alt={`${issue.user.login}'s avatar`}
+              className="w-8 h-8 rounded-full md:hidden"
+            />
+          </div>
+          <a
+            href={issue.html_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-lg md:text-xl font-semibold text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-2 break-words"
+          >
+            {issue.title}
+            <ExternalLink size={16} />
+          </a>
+          <div className="mt-2 flex flex-col md:flex-row md:items-center space-y-1 md:space-y-0 md:space-x-4 text-xs md:text-sm text-gray-600 dark:text-gray-400">
+            <span>#{issue.number}</span>
+            <span className="hidden md:inline">
+              Opened on {format(new Date(issue.created_at), 'MMM d, yyyy')}
+            </span>
+            <span className="md:hidden">
+              Opened: {format(new Date(issue.created_at), 'MMM d, yyyy')}
+            </span>
+            <span className="hidden md:inline">
+              Updated {format(new Date(issue.updated_at), 'MMM d, yyyy')}
+            </span>
+            <span className="md:hidden">
+              Updated: {format(new Date(issue.updated_at), 'MMM d, yyyy')}
+            </span>
+            <span>by {issue.user.login}</span>
+          </div>
+        </div>
+        <img
+          src={issue.user.avatar_url}
+          alt={`${issue.user.login}'s avatar`}
+          className="w-10 h-10 rounded-full hidden md:block"
+        />
+      </div>
+      <div className="mt-4 flex flex-wrap gap-2">
+        {issue.labels.map((label) => (
+          <span
+            key={label.id}
+            className="px-2 py-1 md:px-3 md:py-1 rounded-full text-xs md:text-sm"
+            style={{
+              backgroundColor: `#${label.color}20`,
+              color: `#${label.color}`,
+            }}
+          >
+            {label.name}
+          </span>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
 
               <div className="mt-8 flex justify-between items-center">
                 <button

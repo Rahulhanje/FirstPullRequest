@@ -23,7 +23,7 @@ function App() {
             <Route path="/" element={
               <main >
                 <Hero />
-                <div className='px-20'>
+                <div className='sm:px-20'>
                   <Features />
                   <About />
                 </div>
