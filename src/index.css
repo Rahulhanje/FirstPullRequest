@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --javascript-bg: #f7df1e20;
+    --javascript-text: #f7df1e;
+    --typescript-bg: #3178c620;
+    --typescript-text: #3178c6;
+    --python-bg: #3776ab20;
+    --python-text: #3776ab;
+    --c\\+\\+-bg: #00599c20;
+    --c\\+\\+-text: #00599c;
+    --c-bg: #a8b9cc20;
+    --c-text: #a8b9cc;
+  }
+
+  .dark {
+    --javascript-bg: #f7df1e10;
+    --javascript-text: #f7df1e;
+    --typescript-bg: #3178c610;
+    --typescript-text: #3178c6;
+    --python-bg: #3776ab10;
+    --python-text: #3776ab;
+    --c\\+\\+-bg: #00599c10;
+    --c\\+\\+-text: #00599c;
+    --c-bg: #a8b9cc10;
+    --c-text: #a8b9cc;
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.animate-gradient {
+  background-size: 300%;
+  animation: gradient 8s linear infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.bg-300\% {
+  background-size: 300% 300%;
+}
+
+/* body {
+  font-family: 'VT323', monospace;
+} */
