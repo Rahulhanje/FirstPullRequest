@@ -56,7 +56,7 @@ const OpenSourceDocumentation = () => {
   });
 
   return (
-    <div className="container mx-auto px-4 py-12 pt-28 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+    <div className="container mx-auto px-4 py-12 pt-28 ">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Open Source Projects</h1>
