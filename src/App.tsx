@@ -10,7 +10,7 @@ import Issues from './components/Issues';
 import GitCheatsheet from './pages/GitCheatsheet';
 import Documentation from './pages/Doc';
 import OpenSourceDocumentation from './pages/Doc';
-
+import { Analytics } from "@vercel/analytics/react"
 
 
 function App() {
@@ -37,6 +37,8 @@ function App() {
           </Routes>
           <Footer />
         </div>
+        <Analytics />
+
       </ThemeProvider>
     </Router>
   );
