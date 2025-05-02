@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Twitter, Mail, Code2 } from 'lucide-react';
+import { Github, Twitter, Mail, Code2, Linkedin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
           
           <div className="flex space-x-6">
             <a 
-              href="https://github.com" 
+              href="https://github.com/Rahulhanje" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400 transition-colors"
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
               <Github size={24} />
             </a>
             <a 
-              href="https://twitter.com" 
+              href="https://x.com/RahulHanje_" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400 transition-colors"
@@ -33,7 +33,16 @@ const Footer: React.FC = () => {
               <Twitter size={24} />
             </a>
             <a 
-              href="mailto:contact@FirstPullRequest.dev" 
+              href="https://www.linkedin.com/in/rahul-hanje-b31812252/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400 transition-colors"
+              aria-label="Twitter"
+            >
+              <Linkedin size={24} />
+            </a>
+            <a 
+              href="mailto:firstpullrequest@gmail.com" 
               className="text-gray-600 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400 transition-colors"
               aria-label="Email"
             >
@@ -49,36 +58,38 @@ const Footer: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             
             
-            {/* <div>
-              <h3 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">
-                Community
-              </h3>
+            <div>
+            
               <ul className="space-y-3">
                 <li>
-                  <a href="https://discord.gg/FirstPullRequest" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400 transition-colors">
-                    Discord
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeD6rIgd8hXPIGUPgv7co5LcE_6xy2Dy5rWpvpIu0sqp60Raw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400 transition-colors">
+                    Feedback & Support
                   </a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/FirstPullRequest" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400 transition-colors">
-                    Twitter
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFSxQFRuMuO1Cv9vhqoiRCornBXKgW3Rm6YqnEStd2k9pn6Q/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400 transition-colors">
+                    Report a Bug
                   </a>
                 </li>
                 <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400 transition-colors">
-                    Github
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFSxQFRuMuO1Cv9vhqoiRCornBXKgW3Rm6YqnEStd2k9pn6Q/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400 transition-colors">
+                  firstpullrequest@gmail.com
                   </a>
                 </li>
+               
               </ul>
             </div>
-             */}
+            
             
           </div>
         </div>
-        
+        <div className='mt-12  dark:border-gray-800 pt-8 text-center text-gray-500 dark:text-gray-400 text-sm'>
+        <p>If you found this project helpful, consider leaving a ⭐ on <a href="https://github.com/Rahulhanje/FirstPullRequest">Github</a> — it means a lot!</p>
+        </div>
+
         <div className="mt-12 border-t border-gray-200 dark:border-gray-800 pt-8 text-center text-gray-500 dark:text-gray-400 text-sm">
           <p>&copy; {new Date().getFullYear()} FirstPullRequest. All rights reserved.</p>
         </div>
