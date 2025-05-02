@@ -8,7 +8,7 @@ import About from './components/About';
 import Footer from './components/Footer';
 import Issues from './components/Issues';
 import GitCheatsheet from './pages/GitCheatsheet';
-import Documentation from './pages/Doc';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import OpenSourceDocumentation from './pages/Doc';
 import { Analytics } from "@vercel/analytics/react"
 
@@ -38,6 +38,7 @@ function App() {
           <Footer />
         </div>
         <Analytics />
+        <SpeedInsights />
 
       </ThemeProvider>
     </Router>
