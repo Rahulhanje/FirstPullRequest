@@ -1,0 +1,29 @@
+# Security Headers for SEO and Performance
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://vercel.live https://va.vercel-scripts.com https://vitals.vercel-insights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.github.com https://vercel.live https://va.vercel-scripts.com https://vitals.vercel-insights.com;
+
+# Cache Control for Static Assets
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache Control for Images
+/images/*
+  Cache-Control: public, max-age=2592000
+
+# Cache Control for Fonts
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML files - short cache with revalidation
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# API responses
+/api/*
+  Cache-Control: public, max-age=300, s-maxage=3600

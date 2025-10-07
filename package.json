@@ -1,16 +1,52 @@
 {
-  "name": "vite-react-typescript-starter",
-  "private": true,
-  "version": "0.0.0",
+  "name": "firstpullrequest",
+  "private": false,
+  "version": "1.0.0",
+  "description": "Discover beginner-friendly GitHub issues labeled 'good first issue' and 'documentation'. The ultimate platform for new developers to start their open source journey.",
+  "keywords": [
+    "open source",
+    "github issues",
+    "good first issue",
+    "beginner programming",
+    "first pull request",
+    "documentation",
+    "javascript",
+    "python",
+    "typescript",
+    "programming tutorial",
+    "developer tools",
+    "coding for beginners",
+    "software development",
+    "contributing to open source",
+    "github contribution",
+    "developer community"
+  ],
+  "author": {
+    "name": "Rahul Hanje",
+    "email": "rahulhanje0.7@gmail.com",
+    "url": "https://firstpullrequest.vercel.app"
+  },
+  "homepage": "https://firstpullrequest.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rahulhanje/FirstPullRequest.git"
+  },
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:clean": "rm -rf node_modules/.vite && vite",
     "build": "vite build",
+    "build:clean": "rm -rf dist && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "build:seo": "npm run generate:sitemap && npm run build",
+    "analyze": "npm run build && npx vite-bundle-analyzer"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
+    "@types/react-helmet": "^6.1.11",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "axios": "^1.6.7",
@@ -23,8 +59,11 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
+    "react-helmet-async": "^2.0.5",
     "react-icons": "^5.5.0",
-    "react-router-dom": "^6.22.2"
+    "react-router-dom": "^6.22.2",
+    "sitemap": "^8.0.0",
+    "terser": "^5.44.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",
@@ -32,7 +71,7 @@
     "@types/prismjs": "^1.26.3",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.1",
+    "@vitejs/plugin-react": "^5.0.4",
     "autoprefixer": "^10.4.18",
     "eslint": "^9.9.1",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
