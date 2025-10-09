@@ -244,7 +244,7 @@ const Issues: React.FC = () => {
                     Repo : {(selectedCompany.repo).split('/')[1]}
                   </p>
                   <p className="text-xl text-gray-600 dark:text-gray-400 ml-2 flex items-center gap-2">
-                    Lamguage : {selectedCompany.language}
+                    Language : {selectedCompany.language}
                   </p>
 
                 </div>
