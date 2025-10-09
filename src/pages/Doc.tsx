@@ -3,15 +3,24 @@ import { BookOpen, Code, GitBranch, FileText, Search, Filter, ExternalLink } fro
 import { 
   SiElastic, SiTldraw, SiApacheairflow, SiAppwrite, 
   SiReact, SiOpenfaas, SiKubernetes, SiOpenapiinitiative, 
-  SiProcessingfoundation, SiStylelint, SiTensorflow, SiZulip
+  SiProcessingfoundation, SiStylelint, SiTensorflow, SiZulip,
+  SiMozilla, SiGnome, SiGit, SiJupyter, SiApache, SiPhp, 
+  SiDocker, SiPostgresql, SiMariadb, SiOpenstreetmap, SiBlender, 
+  SiGimp, SiLibreoffice, SiWikipedia, SiFreebsd, SiGitlab, 
+  SiVim, SiRedis, SiLlvm, SiR, SiInkscape, SiMysql, SiSqlite, 
+  SiKrita, SiNextcloud, SiDrupal, SiWordpress, SiJoomla,
+  SiLinux, SiNumpy
 } from 'react-icons/si';
-import { FaHandsHelping, FaNodeJs } from 'react-icons/fa';
+import { FaHandsHelping, FaNodeJs, FaPython, FaJava } from 'react-icons/fa';
 import { IoLogoMicrosoft } from 'react-icons/io5';
-import { MdNat } from 'react-icons/md';
-import { TbHttpTrace } from 'react-icons/tb';
-import { GiMetalPlate } from 'react-icons/gi';
+import { MdNat, MdScience, MdSchool } from 'react-icons/md';
+import { TbHttpTrace, TbBrandCpp } from 'react-icons/tb';
+import { GiMetalPlate, GiArtificialIntelligence } from 'react-icons/gi';
 import { Pipette } from 'lucide-react';
 import { FaGolang } from 'react-icons/fa6';
+import { BiData } from 'react-icons/bi';
+import { HiAcademicCap } from 'react-icons/hi';
+import { BsCodeSquare, BsGear } from 'react-icons/bs';
 
 const OpenSourceDocumentation = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -19,23 +28,104 @@ const OpenSourceDocumentation = () => {
 
   const COMPANIES = [
     { name: 'First Contributions', repo: 'firstcontributions/first-contributions', icon: <FaHandsHelping className="w-6 h-6" />, language: 'All Languages' },
+    
+    // Major Tech Companies
+    { name: 'Google', repo: 'google/material-design-icons', icon: <BsCodeSquare className="w-6 h-6" />, language: 'JavaScript' },
+    { name: 'Microsoft', repo: 'microsoft/vscode', icon: <IoLogoMicrosoft className="w-6 h-6" />, language: 'TypeScript' },
+    { name: 'Facebook (Meta)', repo: 'facebook/react', icon: <SiReact className="w-6 h-6" />, language: 'JavaScript' },
+    { name: 'Mozilla', repo: 'mozilla/firefox-translations', icon: <SiMozilla className="w-6 h-6" />, language: 'Python' },
+    
+    // Apache Software Foundation
+    { name: 'Apache Software Foundation', repo: 'apache/airflow', icon: <SiApacheairflow className="w-6 h-6" />, language: 'Python' },
+    { name: 'Apache Kafka', repo: 'apache/kafka', icon: <SiApache className="w-6 h-6" />, language: 'Java' },
+    { name: 'Apache Spark', repo: 'apache/spark', icon: <SiApache className="w-6 h-6" />, language: 'Scala' },
+    { name: 'Apache Maven', repo: 'apache/maven', icon: <SiApache className="w-6 h-6" />, language: 'Java' },
+    { name: 'Apache Beam', repo: 'apache/beam', icon: <SiApache className="w-6 h-6" />, language: 'Java' },
+    
+    // Programming Languages & Frameworks
+    { name: 'Node.js', repo: 'nodejs/node', icon: <FaNodeJs className="w-6 h-6" />, language: 'JavaScript' },
+    { name: 'Python Software Foundation', repo: 'python/cpython', icon: <FaPython className="w-6 h-6" />, language: 'Python' },
+    { name: 'Golang', repo: 'golang/go', icon: <FaGolang className="w-6 h-6" />, language: 'Go' },
+    { name: 'PHP', repo: 'php/php-src', icon: <SiPhp className="w-6 h-6" />, language: 'PHP' },
+    { name: 'Ruby', repo: 'ruby/ruby', icon: <BsGear className="w-6 h-6" />, language: 'Ruby' },
+    
+    // Cloud Native & DevOps
+    { name: 'Kubernetes', repo: 'kubernetes/kubernetes', icon: <SiKubernetes className="w-6 h-6" />, language: 'Go' },
+    { name: 'Docker', repo: 'docker/cli', icon: <SiDocker className="w-6 h-6" />, language: 'Go' },
+    { name: 'GitLab', repo: 'gitlab-org/gitlab', icon: <SiGitlab className="w-6 h-6" />, language: 'Ruby' },
+    { name: 'Prometheus', repo: 'prometheus/prometheus', icon: <BsGear className="w-6 h-6" />, language: 'Go' },
+    
+    // AI/ML & Data Science
+    { name: 'TensorFlow', repo: 'tensorflow/tensorflow', icon: <SiTensorflow className="w-6 h-6" />, language: 'Python' },
+    { name: 'Scikit-learn', repo: 'scikit-learn/scikit-learn', icon: <GiArtificialIntelligence className="w-6 h-6" />, language: 'Python' },
+    { name: 'NumPy', repo: 'numpy/numpy', icon: <SiNumpy className="w-6 h-6" />, language: 'Python' },
+    { name: 'Pandas', repo: 'pandas-dev/pandas', icon: <BiData className="w-6 h-6" />, language: 'Python' },
+    { name: 'Jupyter', repo: 'jupyter/notebook', icon: <SiJupyter className="w-6 h-6" />, language: 'Python' },
+    { name: 'PyTorch', repo: 'pytorch/pytorch', icon: <GiArtificialIntelligence className="w-6 h-6" />, language: 'Python' },
+    
+    // Operating Systems & Low Level
+    { name: 'FreeBSD', repo: 'freebsd/freebsd-src', icon: <SiFreebsd className="w-6 h-6" />, language: 'C' },
+    { name: 'Linux Kernel', repo: 'torvalds/linux', icon: <SiLinux className="w-6 h-6" />, language: 'C' },
+    { name: 'LLVM', repo: 'llvm/llvm-project', icon: <SiLlvm className="w-6 h-6" />, language: 'C++' },
+    { name: 'GCC', repo: 'gcc-mirror/gcc', icon: <TbBrandCpp className="w-6 h-6" />, language: 'C++' },
+    
+    // Databases
+    { name: 'PostgreSQL', repo: 'postgres/postgres', icon: <SiPostgresql className="w-6 h-6" />, language: 'C' },
+    { name: 'MariaDB', repo: 'mariadb/server', icon: <SiMariadb className="w-6 h-6" />, language: 'C++' },
+    { name: 'Redis', repo: 'redis/redis', icon: <SiRedis className="w-6 h-6" />, language: 'C' },
+    { name: 'SQLite', repo: 'sqlite/sqlite', icon: <SiSqlite className="w-6 h-6" />, language: 'C' },
+    { name: 'MySQL', repo: 'mysql/mysql-server', icon: <SiMysql className="w-6 h-6" />, language: 'C++' },
+    
+    // Creative & Media Tools
+    { name: 'Blender', repo: 'blender/blender', icon: <SiBlender className="w-6 h-6" />, language: 'C++' },
+    { name: 'GIMP', repo: 'gnome/gimp', icon: <SiGimp className="w-6 h-6" />, language: 'C' },
+    { name: 'Inkscape', repo: 'inkscape/inkscape', icon: <SiInkscape className="w-6 h-6" />, language: 'C++' },
+    { name: 'Krita', repo: 'kde/krita', icon: <SiKrita className="w-6 h-6" />, language: 'C++' },
+    { name: 'VLC', repo: 'videolan/vlc', icon: <BsGear className="w-6 h-6" />, language: 'C' },
+    
+    // Text Editors & Development Tools
+    { name: 'Vim', repo: 'vim/vim', icon: <SiVim className="w-6 h-6" />, language: 'C' },
+    { name: 'Emacs', repo: 'emacs-mirror/emacs', icon: <BsGear className="w-6 h-6" />, language: 'C' },
+    { name: 'Git', repo: 'git/git', icon: <SiGit className="w-6 h-6" />, language: 'C' },
+    
+    // Web Frameworks & CMS
+    { name: 'WordPress', repo: 'wordpress/wordpress-develop', icon: <SiWordpress className="w-6 h-6" />, language: 'PHP' },
+    { name: 'Drupal', repo: 'drupal/drupal', icon: <SiDrupal className="w-6 h-6" />, language: 'PHP' },
+    { name: 'Joomla', repo: 'joomla/joomla-cms', icon: <SiJoomla className="w-6 h-6" />, language: 'PHP' },
+    { name: 'Django', repo: 'django/django', icon: <FaPython className="w-6 h-6" />, language: 'Python' },
+    { name: 'Flask', repo: 'pallets/flask', icon: <FaPython className="w-6 h-6" />, language: 'Python' },
+    
+    // Desktop Environments & GUI
+    { name: 'GNOME', repo: 'gnome/gtk', icon: <SiGnome className="w-6 h-6" />, language: 'C' },
+    { name: 'KDE', repo: 'kde/plasma-desktop', icon: <BsGear className="w-6 h-6" />, language: 'C++' },
+    { name: 'Qt', repo: 'qt/qtbase', icon: <BsGear className="w-6 h-6" />, language: 'C++' },
+    
+    // Educational & Non-Profit
+    { name: 'Wikimedia', repo: 'wikimedia/mediawiki', icon: <SiWikipedia className="w-6 h-6" />, language: 'PHP' },
+    { name: 'OpenStreetMap', repo: 'openstreetmap/openstreetmap-website', icon: <SiOpenstreetmap className="w-6 h-6" />, language: 'Ruby' },
+    { name: 'Khan Academy', repo: 'khan/khan-exercises', icon: <HiAcademicCap className="w-6 h-6" />, language: 'JavaScript' },
+    { name: 'Moodle', repo: 'moodle/moodle', icon: <MdSchool className="w-6 h-6" />, language: 'PHP' },
+    
+    // Cloud & Enterprise
+    { name: 'LibreOffice', repo: 'libreoffice/core', icon: <SiLibreoffice className="w-6 h-6" />, language: 'C++' },
+    { name: 'Nextcloud', repo: 'nextcloud/server', icon: <SiNextcloud className="w-6 h-6" />, language: 'PHP' },
+    { name: 'ownCloud', repo: 'owncloud/core', icon: <BsGear className="w-6 h-6" />, language: 'PHP' },
+    
+    // Scientific Computing
+    { name: 'SciPy', repo: 'scipy/scipy', icon: <MdScience className="w-6 h-6" />, language: 'Python' },
+    { name: 'R Project', repo: 'wch/r-source', icon: <SiR className="w-6 h-6" />, language: 'R' },
+    { name: 'Matplotlib', repo: 'matplotlib/matplotlib', icon: <BiData className="w-6 h-6" />, language: 'Python' },
+    
+    // Previously existing entries (updated)
     { name: 'Elastic', repo: 'elastic/kibana', icon: <SiElastic className="w-6 h-6" />, language: 'TypeScript' },
     { name: 'Tldr-pages', repo: 'tldr-pages/tldr', icon: <SiTldraw className="w-6 h-6" />, language: 'Markdown' },
-    { name: 'Golang', repo: 'golang/go', icon: <FaGolang className="w-6 h-6" />, language: 'Go' },
-    { name: 'Apache Software Foundation', repo: 'apache/airflow', icon: <SiApacheairflow className="w-6 h-6" />, language: 'Python' },
     { name: 'Appwrite', repo: 'appwrite/appwrite', icon: <SiAppwrite className="w-6 h-6" />, language: 'TypeScript' },
-    { name: 'Elastic', repo: 'elastic/eui', icon: <SiElastic className="w-6 h-6" />, language: 'TypeScript' },
-    { name: 'Facebook (Meta)', repo: 'facebook/react', icon: <SiReact className="w-6 h-6" />, language: 'JavaScript' },
     { name: 'getodk', repo: 'getodk/collect', icon: <SiOpenfaas className="w-6 h-6" />, language: 'Java' },
-    { name: 'Kubernetes', repo: 'kubernetes/kubernetes', icon: <SiKubernetes className="w-6 h-6" />, language: 'Go' },
     { name: 'Mdn', repo: 'mdn/content', icon: <MdNat className="w-6 h-6" />, language: 'Markdown' },
-    { name: 'Microsoft', repo: 'microsoft/vscode', icon: <IoLogoMicrosoft className="w-6 h-6" />, language: 'TypeScript' },
-    { name: 'Node.js', repo: 'nodejs/node', icon: <FaNodeJs className="w-6 h-6" />, language: 'JavaScript' },
     { name: 'Oppia', repo: 'oppia/oppia', icon: <SiOpenapiinitiative className="w-6 h-6" />, language: 'Python' },
     { name: 'Processing Website', repo: 'processing/processing-website', icon: <SiProcessingfoundation className="w-6 h-6" />, language: 'JavaScript' },
     { name: 'Pypa', repo: 'pypa/pip', icon: <Pipette className="w-6 h-6" />, language: 'Python' },
     { name: 'Stylelint', repo: 'stylelint/stylelint', icon: <SiStylelint className="w-6 h-6" />, language: 'JavaScript' },
-    { name: 'TensorFlow', repo: 'tensorflow/tensorflow', icon: <SiTensorflow className="w-6 h-6" />, language: 'Unknown' },
     { name: 'traceloop', repo: 'traceloop/openllmetry', icon: <TbHttpTrace className="w-6 h-6" />, language: 'Python' },
     { name: 'MetaMask', repo: 'metamask/metamask-extension', icon: <GiMetalPlate className="w-6 h-6" />, language: 'JavaScript and TypeScript' },
     { name: 'Zulip', repo: 'zulip/zulip', icon: <SiZulip className="w-6 h-6" />, language: 'Python' },
