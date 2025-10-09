@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://firstpullrequest.vercel.app/sitemap.xml
+Sitemap: https://www.firstpullrequest.space/sitemap.xml
 
 # Crawl-delay for better server performance
 Crawl-delay: 1
