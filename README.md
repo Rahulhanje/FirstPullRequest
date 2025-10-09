@@ -1,7 +1,7 @@
 
 # 🚀 FirstPullRequest - Your Gateway to Open Source
 
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Ffirstpullrequest.vercel.app)](https://firstpullrequest.vercel.app/)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.firstpullrequest.space)](https://www.firstpullrequest.space/)
 [![GitHub stars](https://img.shields.io/github/stars/Rahulhanje/FirstPullRequest)](https://github.com/Rahulhanje/FirstPullRequest/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/Rahulhanje/FirstPullRequest)](https://github.com/Rahulhanje/FirstPullRequest/issues)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
@@ -10,7 +10,7 @@
 
 ## 🌟 Live Demo
 
-**🔗 [https://firstpullrequest.vercel.app/](https://firstpullrequest.vercel.app/)**
+**🔗 [https://www.firstpullrequest.space/](https://www.firstpullrequest.space/)**
 
 ---
 
@@ -272,7 +272,7 @@ This project is specifically designed to help **students and first-time contribu
 - 📧 **Email**: [rahulhanje0.7@gmail.com](mailto:rahulhanje0.7@gmail.com)
 - 🐦 **Twitter**: [@rahulhanje](https://twitter.com/rahulhanje)
 - 💼 **LinkedIn**: [Rahul Hanje](https://linkedin.com/in/rahulhanje)
-- 🌐 **Website**: [FirstPullRequest](https://firstpullrequest.vercel.app)
+- 🌐 **Website**: [FirstPullRequest](https://www.firstpullrequest.space)
 
 ### Support the Project
 - ⭐ **Star** this repository if it helped you!
@@ -303,7 +303,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ### 🌟 Made with ❤️ to help developers make their **First Pull Request** 🌟
 
-**[Visit FirstPullRequest →](https://firstpullrequest.vercel.app/)**
+**[Visit FirstPullRequest →](https://www.firstpullrequest.space/)**
 
 *Building the future of open source, one contribution at a time.*
 

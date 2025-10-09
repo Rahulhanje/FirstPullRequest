@@ -24,9 +24,9 @@
   "author": {
     "name": "Rahul Hanje",
     "email": "rahulhanje0.7@gmail.com",
-    "url": "https://firstpullrequest.vercel.app"
+    "url": "https://www.firstpullrequest.space"
   },
-  "homepage": "https://firstpullrequest.vercel.app",
+  "homepage": "https://www.firstpullrequest.space",
   "repository": {
     "type": "git",
     "url": "https://github.com/Rahulhanje/FirstPullRequest.git"
@@ -40,8 +40,10 @@
     "build:clean": "rm -rf dist && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "generate:sitemap": "node scripts/generate-sitemap.js",
-    "build:seo": "npm run generate:sitemap && npm run build",
+    "generate:sitemap": "node scripts/generate-sitemap-fixed.js",
+    "validate:sitemap": "node scripts/validate-sitemap-simple.js",
+    "build:seo": "npm run generate:sitemap && npm run validate:sitemap && npm run build",
+    "deploy:seo": "powershell -ExecutionPolicy Bypass -File deploy-seo.ps1",
     "analyze": "npm run build && npx vite-bundle-analyzer"
   },
   "dependencies": {
@@ -62,7 +64,6 @@
     "react-helmet-async": "^2.0.5",
     "react-icons": "^5.5.0",
     "react-router-dom": "^6.22.2",
-    "sitemap": "^8.0.0",
     "terser": "^5.44.0"
   },
   "devDependencies": {
@@ -78,6 +79,7 @@
     "eslint-plugin-react-refresh": "^0.4.11",
     "globals": "^15.9.0",
     "postcss": "^8.4.35",
+    "sitemap": "^8.0.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.3.0",

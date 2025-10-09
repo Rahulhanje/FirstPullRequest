@@ -25,7 +25,7 @@ const SEO: React.FC<SEOProps> = ({
   canonical,
   ogTitle,
   ogDescription,
-  ogImage = "https://firstpullrequest.vercel.app/og-image.png",
+  ogImage = "https://www.firstpullrequest.space/og-image.png",
   ogType = "website",
   twitterCard = "summary_large_image",
   twitterTitle,
@@ -41,7 +41,7 @@ const SEO: React.FC<SEOProps> = ({
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "Any",
     "description": description,
-    "url": "https://firstpullrequest.vercel.app",
+    "url": "https://www.firstpullrequest.space",
     "author": {
       "@type": "Person",
       "name": "Rahul Hanje",
@@ -61,7 +61,7 @@ const SEO: React.FC<SEOProps> = ({
     "applicationSubCategory": "Educational",
     "browserRequirements": "Requires JavaScript. Requires HTML5.",
     "softwareVersion": "1.0",
-    "screenshot": "https://firstpullrequest.vercel.app/screenshot.png",
+    "screenshot": "https://www.firstpullrequest.space/screenshot.png",
     "featureList": [
       "Find beginner-friendly GitHub issues",
       "Filter by programming language",
@@ -73,7 +73,7 @@ const SEO: React.FC<SEOProps> = ({
     ]
   };
 
-  const pageUrl = canonical || `https://firstpullrequest.vercel.app${window.location.pathname}`;
+  const pageUrl = canonical || `https://www.firstpullrequest.space${window.location.pathname}`;
 
   return (
     <Helmet>
@@ -150,8 +150,8 @@ const SEO: React.FC<SEOProps> = ({
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "FirstPullRequest",
-          "url": "https://firstpullrequest.vercel.app",
-          "logo": "https://firstpullrequest.vercel.app/logo.png",
+          "url": "https://www.firstpullrequest.space",
+          "logo": "https://www.firstpullrequest.space/logo.png",
           "sameAs": [
             "https://github.com/Rahulhanje/FirstPullRequest"
           ],

@@ -3,10 +3,15 @@ import { createWriteStream } from 'fs';
 import { resolve } from 'path';
 
 const generateSitemap = async () => {
+  // Ensure correct hostname
   const hostname = 'https://www.firstpullrequest.space';
-  const sitemap = new SitemapStream({ hostname });
+  const sitemap = new SitemapStream({ 
+    hostname: hostname,
+    cacheTime: 600000
+  });
 
   console.log('🗺️  Generating sitemap for FirstPullRequest...');
+  console.log(`🌐 Using hostname: ${hostname}`);
 
   // Static pages with SEO-optimized priorities and frequencies
   const pages = [
@@ -15,14 +20,7 @@ const generateSitemap = async () => {
       url: '/', 
       changefreq: 'daily', 
       priority: 1.0,
-      lastmod: new Date().toISOString(),
-      img: [
-        {
-          url: `${hostname}/og-image.png`,
-          caption: 'FirstPullRequest - Find Your First Open Source Contribution',
-          title: 'Homepage Banner'
-        }
-      ]
+      lastmod: new Date().toISOString()
     },
     
     // Issues page - second highest priority (main functionality)
@@ -30,14 +28,7 @@ const generateSitemap = async () => {
       url: '/issues', 
       changefreq: 'hourly', 
       priority: 0.9,
-      lastmod: new Date().toISOString(),
-      img: [
-        {
-          url: `${hostname}/issues-screenshot.png`,
-          caption: 'Browse beginner-friendly GitHub issues',
-          title: 'Issues Browser'
-        }
-      ]
+      lastmod: new Date().toISOString()
     },
     
     // Educational content - high priority for SEO
@@ -55,7 +46,7 @@ const generateSitemap = async () => {
       lastmod: new Date().toISOString()
     },
 
-    // Additional potential pages (if they exist or will be added)
+    // Additional potential pages
     { 
       url: '/about', 
       changefreq: 'monthly', 
@@ -117,19 +108,12 @@ const generateSitemap = async () => {
 
   // Add pages to sitemap
   pages.forEach(page => {
-    const entry = {
+    sitemap.write({
       url: page.url,
       changefreq: page.changefreq,
       priority: page.priority,
       lastmod: page.lastmod,
-    };
-
-    // Add images if they exist
-    if (page.img) {
-      entry.img = page.img;
-    }
-
-    sitemap.write(entry);
+    });
   });
 
   sitemap.end();
@@ -147,7 +131,6 @@ const generateSitemap = async () => {
     console.log(`🔗 URL: ${hostname}/sitemap.xml`);
     console.log(`📊 Total URLs: ${pages.length}`);
     
-    // Generate sitemap index for better organization (if needed in future)
     console.log('🎯 Sitemap includes:');
     pages.forEach(page => {
       console.log(`   - ${hostname}${page.url} (Priority: ${page.priority})`);
@@ -161,8 +144,8 @@ const generateSitemap = async () => {
 
 // Generate robots.txt hint
 const generateRobotsHint = () => {
-  console.log('\n🤖 Don\'t forget to update robots.txt with:');
-  console.log('Sitemap: https://www.firstpullrequest.space/sitemap.xml');
+  console.log('\n🤖 Robots.txt already updated with sitemap URL');
+  console.log('📍 Submit to Google Search Console: https://search.google.com/search-console');
 };
 
 generateSitemap()

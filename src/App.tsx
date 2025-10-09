@@ -38,7 +38,7 @@ function App() {
                   <SEO 
                     title="Find Beginner-Friendly GitHub Issues | FirstPullRequest"
                     description="Browse thousands of beginner-friendly GitHub issues labeled 'good first issue' and 'documentation'. Filter by programming language and find your perfect first contribution."
-                    canonical="https://firstpullrequest.vercel.app/issues"
+                    canonical="https://www.firstpullrequest.space/issues"
                   />
                   <Issues />
                 </>
@@ -48,7 +48,7 @@ function App() {
                   <SEO 
                     title="Git Cheatsheet for Beginners | FirstPullRequest"
                     description="Complete Git cheatsheet with essential commands for beginners. Learn Git basics to make your first pull request with confidence."
-                    canonical="https://firstpullrequest.vercel.app/git-cheatsheet"
+                    canonical="https://www.firstpullrequest.space/git-cheatsheet"
                   />
                   <GitCheatsheet />
                 </>
@@ -58,7 +58,7 @@ function App() {
                   <SEO 
                     title="Open Source Documentation & Guide | FirstPullRequest"
                     description="Complete guide to open source contribution. Learn how to contribute to open source projects, understand GitHub workflow, and make meaningful contributions."
-                    canonical="https://firstpullrequest.vercel.app/OpenSourceDocumentation"
+                    canonical="https://www.firstpullrequest.space/OpenSourceDocumentation"
                   />
                   <OpenSourceDocumentation />
                 </>
